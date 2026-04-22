@@ -1,10 +1,28 @@
-# Rock Paper Scissors
+# 🎮 rock paper scissors
 
-A simple Rock Paper Scissors game built with HTML and JavaScript.
+a retro synthwave rock paper scissors game.
+built from scratch with vanilla html, css, and javascript.
 
-## Features
-- Play rock, paper or scissors against the computer
-- Tracks your wins and losses
+&nbsp;
 
-## Planned Updates
-- CSS styling coming soon
+&nbsp;
+
+---
+
+✦ preview
+
+![rps preview](./screenshot.png)
+
+---
+
+✦ features
+
+- play against the computer
+- round tracker with score counter
+- tie, win and loss detection
+- round history panel with clear option
+- keyboard shortcuts — r, p, s to play
+
+---
+
+*fully functional. dangerously over-styled.* 🎮
