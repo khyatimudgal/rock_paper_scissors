@@ -1,18 +1,76 @@
 <!DOCTYPE html>
+<html>
 <head>
   <title>Rock Paper Scissors</title>
-
-  <body>
-    <h1>Rock Paper Scissors</h1>
-
-    <button onclick="YourChoice = 1, play(), console.log('Your score: ', YourScore, 'Computer Score: ', ComputerScore)">Rock</button>
-
-    <button onclick="YourChoice = 2, play(),console.log('Your score: ', YourScore, 'Computer Score: ', ComputerScore)">Paper</button>
-
-    <button onclick="YourChoice = 3, play(), console.log('Your score: ', YourScore, 'Computer Score: ', ComputerScore)">Scissors</button>
-
-  </body>
-
-  <script src = 'rock_paper_scissor.js'></script>
-
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✂️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="rock_paper_scissor.css">
 </head>
+<body>
+
+  <div id="stars"></div>
+  <div id="sun"></div>
+  <div class="diamond d1"></div>
+  <div class="diamond d2"></div>
+  <div class="diamond d3"></div>
+
+  <h1>Rock Paper Scissors</h1>
+
+  <!-- Round selector -->
+  <div id="round-selector">
+    <p>Choose number of rounds:</p>
+    <div id="round-btns">
+      <button onclick="setRounds(1)">1</button>
+      <button onclick="setRounds(2)">2</button>
+      <button onclick="setRounds(3)">3</button>
+      <button onclick="setRounds(4)">4</button>
+      <button onclick="setRounds(5)">5</button>
+    </div>
+  </div>
+
+  <!-- Game area -->
+  <div id="game-area" style="display:none">
+
+    <div id="round-info">Round <span id="current-round">1</span> of <span id="total-rounds">0</span></div>
+
+    <div id="choices">
+      <button onclick="play('rock')">🪨 Rock</button>
+      <button onclick="play('paper')">📄 Paper</button>
+      <button onclick="play('scissors')">✂️ Scissors</button>
+    </div>
+
+    <div id="result-area">
+      <div id="match-result"></div>
+      <div id="match-detail"></div>
+    </div>
+
+    <div id="scoreboard">
+      <div>You: <span id="your-score">0</span></div>
+      <div>Ties: <span id="tie-score">0</span></div>
+      <div>Computer: <span id="computer-score">0</span></div>
+    </div>
+
+  </div>
+
+  <!-- Game over -->
+  <div id="game-over" style="display:none">
+    <div id="game-result"></div>
+    <button id="play-again-btn" onclick="newGame()">Play Again</button>
+  </div>
+
+  <!-- Round history -->
+  <div id="history" style="display:none">
+    <div id="history-header">
+      <span>Round History</span>
+      <button id="clear-history-btn" onclick="clearHistory()">Clear</button>
+    </div>
+    <ul id="history-list"></ul>
+  </div>
+
+  <div id="keyboard-hint" style="display:none">[ R ] Rock &nbsp;&nbsp; [ P ] Paper &nbsp;&nbsp; [ S ] Scissors</div>
+
+  <script src="rock_paper_scissor.js"></script>
+
+</body>
+</html>
